@@ -1,0 +1,15 @@
+{
+    "name": "dcuesta1/velblog",
+    "description": "A fancy blog package for the Laravel Framework.",
+    "require-dev": {
+        "orchestra/testbench": "^4.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daniel Cuesta",
+            "email": "cuestadaniel31@gmail.com"
+        }
+    ],
+    "require": {}
+}
