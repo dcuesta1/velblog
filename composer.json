@@ -11,5 +11,22 @@
             "email": "cuestadaniel31@gmail.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "dcuesta1\\Velblog\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "dcuesta1\\Velblog\\Tests\\*": "tests/"
+    },
+    "extra": {
+        "laravel": {
+            "laravel": {
+                "providers": [
+                    "dcuesta1\\Velblog\\VelblogBaseServiceProvider"
+                ]
+            }
+        }
+    }
 }
