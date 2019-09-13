@@ -22,11 +22,9 @@
     },
     "extra": {
         "laravel": {
-            "laravel": {
-                "providers": [
-                    "dcuesta1\\Velblog\\VelblogBaseServiceProvider"
-                ]
-            }
+            "providers": [
+                "dcuesta1\\Velblog\\VelblogBaseServiceProvider"
+            ]
         }
     }
 }
