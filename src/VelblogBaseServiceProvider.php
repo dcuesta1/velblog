@@ -29,20 +29,20 @@ class VelblogBaseServiceProvider extends ServiceProvider
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         $this->registerEloquentFactoriesFrom(__DIR__.'/../database/factories');
         $this->registerRoutes();
+
     }
 
     protected function registerPublishing()
     {
         $this->publishes([
-            __DIR__.'/../config/velblog.php' => config_path('velblog.php')
-        ], 'velblog-config');
+            __DIR__.'/../config/velblog.php' => config_path('velblog.php'),
+            __DIR__.'/../resources/publishedViews' => resource_path('views/vendor/velblog'),
+        ], 'velblog');           
     }
 
     protected function registerRoutes()
     {
-        Route::group(['prefix' => config('velblog.url_path','blog')], function() {
-            $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
-        });
+        $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
     }
 
     protected function registerEloquentFactoriesFrom($path)
